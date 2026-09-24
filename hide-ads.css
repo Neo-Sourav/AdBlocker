@@ -1,0 +1,9 @@
+/* Hide common ad containers globally */
+.ad-container, 
+.ad-banner, 
+.advertisement, 
+[id^="google_ads_iframe"], 
+[class*="sponsored-"], 
+.ytd-banner-promo-renderer {
+    display: none !important;
+}
