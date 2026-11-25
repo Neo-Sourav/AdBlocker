@@ -1,17 +1,16 @@
-# Ad Blocker and Video Unpauser
+# Course Focus & Ad Blocker (v2.3)
 
-A lightweight Chrome/Chromium extension that prevents course videos and media players from auto-pausing when you switch tabs, minimize the window, or press Alt-Tab.
+A lightweight Chromium/Brave extension that keeps course videos playing in the background, adds instant speed/skip controls, and blocks common web and video ads.
 
-## How It Works
-- Overrides `document.visibilityState`, `document.hidden`, and `document.hasFocus()`.
-- Captures and drops `blur`, `focusout`, and `visibilitychange` events before player scripts can intercept them.
-- Patches the HTML5 `<video>` element's `.pause()` method so background pause events are ignored while leaving manual user pause functional.
+## Features
+- **Anti-Pause & Focus Spoofing:** Prevents course players (including embedded iframes and Shadow DOM players) from pausing when you switch tabs or Alt-Tab.
+- **Top-Right Control Pill:** Automatically appears on pages with video players, giving one-click **16x** speed toggle and **Skip** to end buttons.
+- **One-Click Toolbar Action:** Clicking the pinned extension icon in the browser toolbar immediately skips the active video to the end.
+- **Built-In Ad Blocker:** Blocks major ad networks (`googlesyndication`, `doubleclick`, `taboola`) via `declarativeNetRequest`, hides empty ad containers, and auto-skips video ads.
 
 ## Installation
-
 1. Clone or download this repository as a ZIP and extract it.
-2. Open your browser and navigate to `chrome://extensions` (or `edge://extensions` / `brave://extensions`).
+2. Open `chrome://extensions` or `brave://extensions`.
 3. Enable **Developer mode** in the top-right corner.
-4. Click **Load unpacked** in the top-left corner.
-5. Select the extracted folder.
-6. Refresh the tab with your video.
+4. Click **Load unpacked** and select the extracted folder.
+5. (Optional) Pin the extension icon to your toolbar for one-click video skipping.
