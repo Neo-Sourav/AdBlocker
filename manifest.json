@@ -1,11 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Course Focus & Ad Blocker",
-  "version": "2.0",
-  "description": "Prevents video pauses and blocks common ads/trackers.",
+  "version": "2.3",
+  "description": "Prevents video pauses, adds permanent top-right & one-click toolbar controls, and blocks ads.",
   "permissions": [
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "scripting",
+    "activeTab"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "One-Click Skip Video to End"
+  },
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -19,6 +27,12 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
       "css": ["hide-ads.css"],
       "run_at": "document_start",
       "all_frames": true

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 210px;
+      margin: 0;
+      padding: 12px;
+      background: #141414;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 13px;
+      color: #aaaaaa;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    button {
+      width: 100%;
+      padding: 9px 12px;
+      margin-bottom: 8px;
+      border: none;
+      border-radius: 6px;
+      background: #00ff88;
+      color: #111111;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    button:last-child {
+      margin-bottom: 0;
+      background: #2b2b2b;
+      color: #00ff88;
+      border: 1px solid #00ff88;
+    }
+    #status {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h3>Video Controls</h3>
+  <button id="fastBtn">Toggle 16x Speed</button>
+  <button id="skipBtn">Skip to End</button>
+  <div id="status">Anti-pause & Ad-block active</div>
+  <script src="popup.js"></script>
+</body>
+</html>
