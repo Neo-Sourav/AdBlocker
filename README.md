@@ -1,4 +1,4 @@
-# Course Focus & Ad Blocker (v2.3)
+# Ad Blocker (v2.3)
 
 A lightweight Chromium/Brave extension that keeps course videos playing in the background, adds instant speed/skip controls, and blocks common web and video ads.
 
